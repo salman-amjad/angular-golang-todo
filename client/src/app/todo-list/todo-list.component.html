@@ -1,0 +1,20 @@
+<h2 class="text-center">Todos</h2>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of items; index as i" [ngClass]="{'completed': item.completed}">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" [(ngModel)]="item.completed" (change)="markCompleted(i)" [disabled]="item.completed">
+                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                {{item.name}} 
+            </label>
+
+            <a href="#" class="btn btn-link btn-sm pull-right" (click)="deleteItem(item.id)">X</a>
+        </div>
+        <div class="line"></div>
+    </li>
+</ul>
+
+<div class="action-bar">
+    <a routerLink="/add" class="btn btn-success btn-lg">Add New</a>
+</div>

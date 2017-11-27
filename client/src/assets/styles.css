@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #EEE;
+}
+main {
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto 0;
+    clear: both;
+    float: none;
+    min-width: 400px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 11px 19px -5px rgba(0,0,0,0.39);
+    -moz-box-shadow: 10px 11px 19px -5px rgba(0,0,0,0.39);
+    box-shadow: 10px 11px 19px -5px rgba(0,0,0,0.39);
+    background: #CCC;
+}
+
+.action-bar {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.action-bar .btn {
+    width: 100%;
+}

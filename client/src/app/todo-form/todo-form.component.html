@@ -1,0 +1,16 @@
+<h2 class="text-center">Add Item</h2>
+
+<form #todoForm="ngForm" (ngSubmit)="submitContact(todoForm.value)" [hidden]="contactSent">
+    <div *ngIf="message" class="alert {{messageClass}}" role="alert" [hidden]="contactSent">{{message}}</div>
+    <div class="col-xs-12">
+        <input [(ngModel)]="todo.name" name="name" type="text" class="form-control form-control-lg" placeholder="Item's title" required>
+    </div>
+
+    <div class="action-bar">
+        <button type="submit" class="btn btn-success btn-lg" [disabled]="!todoForm.form.valid || inProgress">
+            <i class="fa fa-spinner fa-spin fa-fw" [hidden]="!inProgress"></i>
+            <i class="i-before fa fa-floppy-o" [hidden]="inProgress"></i> Save
+        </button>
+        <button type="button" class="btn btn-link btn-lg" (click)="goBack()">Cancel</button>
+    </div>
+</form>

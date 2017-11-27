@@ -1,0 +1,13 @@
+.action-bar {
+    text-align: left;
+}
+    
+.action-bar button {
+    display: inline-block;
+    width: 40%;
+    cursor: pointer;
+}
+
+.action-bar button.btn-link {
+    width: 20%;
+}
